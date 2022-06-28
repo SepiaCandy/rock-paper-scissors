@@ -43,8 +43,21 @@ for (let i = 0; i < 5; i++) {
       alert("Round " + (i+1) + " resulted in a tie. The score is " + playerScore + " - " + computerScore);
       
    }
-   
+  
 }
+let winOrLose
+if (playerScore > computerScore) {
+    winOrLose = "win";
+} else {
+    winOrLose = "lose";
+}
+let replay = confirm("Final score is " + playerScore + " - " + computerScore + " you " + winOrLose + ". Would you like to play again?");
+
+   if (replay == true) {
+      window.location.reload();
+   } else if (replay == false) {
+      window.close();
+   }
 }
 //const playerSelection = "Rock";
 game()
