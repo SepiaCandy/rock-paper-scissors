@@ -26,6 +26,7 @@ function game() {
    let computerScore = 0;
 for (let i = 0; i < 5; i++) {
    let playerSelection = (window.prompt("Rock, Paper, or Scissors?"));
+   playerSelection = playerSelection.toLowerCase();
    let computerSelection = computerPlay();
    alert(computerSelection);
    //alert(computerSelection);
