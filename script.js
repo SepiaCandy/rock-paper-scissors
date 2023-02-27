@@ -3,33 +3,26 @@ function computerPlay() {
    let rand = Math.floor(Math.random() * 3);
    const options = ["rock", "paper", "scissors"];
    let computerSelection = options[rand];
-   //alert(computerSelection);
+   console.log(computerSelection)
    return computerSelection;
    
 }
 //playRound plays one round of rock paper scissors.
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerPlay) {
    let result;
    
    
-   if (playerSelection == computerSelection) {
+   if (playerSelection == computerPlay) {
       result = "tied";
-   } else if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "rock")) {
+   } else if ((playerSelection == "rock" && computerPlay == "scissors") || (playerSelection == "scissors" && computerPlay == "paper") || (playerSelection == "paper" && computerPlay == "rock")) {
       result = "won";
    } else {result = "lost";}
+   console.log(result, playerSelection, computerPlay);
    return result;
 }
 
-let winOrLose
-if (playerScore > computerScore) {
-    winOrLose = "win";
-} else {
-    winOrLose = "lose";
-}
-let replay = confirm("Final score is " + playerScore + " - " + computerScore + " you " + winOrLose + ". Would you like to play again?");
+let playerSelection;
 
-   if (replay == true) {
-      window.location.reload();
-   } else if (replay == false) {
-      window.close();
-   }
+   document.getElementById('Rock').addEventListener('click', () => {playerSelection = 'rock'; playRound(playerSelection, computerPlay());});
+   document.getElementById('Paper').addEventListener('click', () => {playerSelection = 'paper'; playRound(playerSelection, computerPlay());});
+   document.getElementById('Scissors').addEventListener('click', () => {playerSelection = 'scissors'; playRound(playerSelection, computerPlay());});
