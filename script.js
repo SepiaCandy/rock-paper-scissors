@@ -11,7 +11,6 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
    let result;
    
-   //playerSelection = playerSelection.toLowerCase();
    
    if (playerSelection == computerSelection) {
       result = "tied";
@@ -21,30 +20,6 @@ function playRound(playerSelection, computerSelection) {
    return result;
 }
 
-function game() {
-   let playerScore = 0;
-   let computerScore = 0;
-for (let i = 0; i < 5; i++) {
-   let playerSelection = (window.prompt("Rock, Paper, or Scissors?"));
-   playerSelection = playerSelection.toLowerCase();
-   let computerSelection = computerPlay();
-   alert(computerSelection);
-   //alert(computerSelection);
-   playRound(playerSelection, computerSelection)
-   if (playRound(playerSelection, computerSelection) == "won") {
-      playerScore++;
-      alert("You won round " + (i+1) + ". The score is " + playerScore + " - " + computerScore);
-   
-   } else if (playRound(playerSelection, computerSelection) == "lost") {
-      computerScore++;
-      alert("You lost round " + (i+1) + ". The score is " + playerScore + " - " + computerScore);
-         
-   } else {
-      alert("Round " + (i+1) + " resulted in a tie. The score is " + playerScore + " - " + computerScore);
-      
-   }
-  
-}
 let winOrLose
 if (playerScore > computerScore) {
     winOrLose = "win";
@@ -58,7 +33,3 @@ let replay = confirm("Final score is " + playerScore + " - " + computerScore + "
    } else if (replay == false) {
       window.close();
    }
-}
-//const playerSelection = "Rock";
-game()
-//alert(playRound(playerSelection, computerSelection));
