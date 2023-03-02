@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<hmtl>
+<html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width:device-width, initial-scale: 1.0">
         <title>Rock Paper Scissors!</title>
-        
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         
         <script src="script.js" defer></script>
 
-<div class = "flex container">
-<div class = "overallScores">
+<div class="flexContainer">
+<div class="overallScores">
+    <div>
     <h2>Game Scores</h2>
+    <div class="flexRow">
 <p id="overWin">0W</p>
 <p id="overTie">0T</p>
 <p id="overLose">0L</p>
 </div>
+</div>
+</div>
 
 <div class="scores">
     <h3>Round Scores</h3>
+    <div class="flexRow">
     <p id="pScore">W: 0</p>
     <p id="tScore">T: 0</p>
     <p id="cScore">L: 0</p>
+    </div>
 </div>
 
 <div class="choices">
@@ -43,4 +50,4 @@
 </div>
 </div>
     </body>
-</hmtl>
+</html>
